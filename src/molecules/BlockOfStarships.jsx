@@ -8,7 +8,7 @@ const Starships = () => {
     axios.get(`https://swapi.dev/api/starships/${id}`).then((response) => {
       setStarships(response.results);
     });
-  }, []);
+  }, [id]);
 
   return (
     <div>

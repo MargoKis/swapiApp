@@ -8,7 +8,7 @@ const Planets = () => {
     axios.get(`https://swapi.dev/api/planets/${id}`).then((response) => {
       setPlanets(response.results);
     });
-  }, []);
+  }, [id]);
 
   return (
     <div>

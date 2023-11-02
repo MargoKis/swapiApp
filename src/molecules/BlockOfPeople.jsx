@@ -6,9 +6,9 @@ const People = () => {
 
   useEffect(() => {
     axios.get(`https://swapi.dev/api/people/${id}`).then((response) => {
-      setPeople(response.results);
+      setPeople(response.results); // Оновлення стану, коли приходе відповідь від api
     });
-  }, []);
+  }, [id]);// Ефект відбувається при зміні id
 
   return (
     <div>
