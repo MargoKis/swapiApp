@@ -32,6 +32,8 @@ const PlanetDetails = () => {
   }
 
   return (
+    <>
+    <Header/>
     <div>
       <h2>Деталі планети {planet.name}</h2>
         <div>
@@ -40,6 +42,7 @@ const PlanetDetails = () => {
           <p>Населення: {planet.population}</p>
         </div>
     </div>
+    </>
   );
 };
 

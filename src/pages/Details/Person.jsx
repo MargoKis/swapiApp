@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { useParams } from "react-router-dom";
 import Loading from "../../molecules/Loading";
 import Error404 from "../../molecules/Error404";
+import styles from './details.module.css'
+import Header from "../../molecules/Header";
 
 const PersonDetails = () => {
   const { id } = useParams();
@@ -33,15 +35,19 @@ const PersonDetails = () => {
   }
 
   return (
-    <div>
-      <h2>Деталі персонажа {person.name}</h2>
-      <div>
-        <p>Стать: {person.gender}</p>
-        <p>Колір волосся: {person.hair_color}</p>
-        <p>Вага: {person.mass}</p>
-        <p>Колір шкіри: {person.skin_color}</p>
+    <>
+    <Header/>
+     <div>
+      <h2 className={styles.mainTitle}>Details about {person.name}</h2>
+      <div className={styles.card}>
+        <p>Gender: {person.gender}</p>
+        <p>Hair color: {person.hair_color}</p>
+        <p>Mass: {person.mass}</p>
+        <p>Skin color: {person.skin_color}</p>
       </div>
     </div>
+    </>
+   
   );
 };
 

@@ -1,11 +1,14 @@
-// store.js
-import { configureStore } from '@reduxjs/toolkit';
-import { api } from './apiSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import combinedApi from "./apiCombined";
+import { peoplePaginationReducer, planetsPaginationReducer, starshipsPaginationReducer } from "../redux/paginationSlice.js";
 
 export const store = configureStore({
   reducer: {
-    [api.reducerPath]: api.reducer,
+    [combinedApi.reducerPath]: combinedApi.reducer,
+    peoplePagination: peoplePaginationReducer,
+    planetsPagination: planetsPaginationReducer,
+    starshipsPagination: starshipsPaginationReducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(api.middleware),
+    getDefaultMiddleware().concat(combinedApi.middleware),
 });

@@ -1,23 +1,32 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import Button from "../atoms/Button";
+import styles from "./molecules.module.css";
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   return (
-    <div className="pagination">
-      <Button
-        onClickButton={() => onPageChange(currentPage - 1)}
-        disabled={currentPage === 1}
-      >
-        Previous
-      </Button>
-      <span>Page {currentPage} of {totalPages}</span>
-      <Button
-        onClickButton={() => onPageChange(currentPage + 1)}
-        disabled={currentPage === totalPages}
-      >
-        Next
-      </Button>
+    <div className={styles.paginationWrap}>
+      <div className={styles.paginationBtnWrap}>
+        <Button
+          onClickButton={() => onPageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          classNameButton={styles.paginationBtn}
+        >
+          Next
+        </Button>
+      </div>
+      <span className={styles.paginationPage}>
+        Page {currentPage} of {totalPages}
+      </span>
+      <div className={styles.paginationBtnWrap}>
+        <Button
+          onClickButton={() => onPageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+          classNameButton={styles.paginationBtn}
+        >
+          Previous
+        </Button>
+      </div>
     </div>
   );
 };

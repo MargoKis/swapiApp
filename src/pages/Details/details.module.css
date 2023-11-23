@@ -1,0 +1,22 @@
+.mainTitle {
+  font-size: 30px;
+  margin-top: 80px;
+  margin-left: 8%;
+  background-color: yellow;
+  max-width: fit-content;
+  text-decoration: line-through black 1px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+}
+
+.card {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  padding: 20px;
+  margin-bottom: 4%;
+  height: auto;
+  border: 1px solid black;
+  outline: 3px solid yellow;
+  outline-offset: 10px
+}

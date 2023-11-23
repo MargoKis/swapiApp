@@ -33,6 +33,8 @@ const StarshipDetails = () => {
   }
 
   return (
+    <>
+    <Header/>
     <div>
       <h2>Деталі космічного корабля {starship.name}</h2>
       <div>
@@ -41,6 +43,7 @@ const StarshipDetails = () => {
         <p>Пасажири: {starship.passengers}</p>
       </div>
     </div>
+    </>
   );
 };
 

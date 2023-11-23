@@ -1,0 +1,90 @@
+.headerWrap {
+  background-color: rgb(73, 73, 73);
+  height: 10%;
+  width: 100%;
+}
+
+.headerLogo {
+  font-size: 30px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+.robot {
+  position: absolute;
+  top: 60%;
+  left: 89%;
+}
+
+.headerBtnWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: yellow;
+  gap: 10%;
+  height: 20px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.headerLink {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  border-color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.paginationWrap {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 30px;
+  margin-right: 20%;
+}
+
+.paginationBtn {
+  background-color: rgb(125, 125, 125);
+  color: yellow;
+  border-color: yellow 4px solid;
+  padding: 6px 14px;
+  font-size: 14px;
+  width: 100px;
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+.paginationPage {
+  color: black;
+  font-size: 16px;
+}
+
+.paginationBtnWrap {
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  border: 1px solid black;
+  border-radius: 100px;
+  background-color: transparent;
+  align-items: center;
+}
+
+.errorWrap {
+  border: yellow 5px solid;
+  outline: double black 2px;
+  padding: 30px;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+}
