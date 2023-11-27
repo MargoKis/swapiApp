@@ -12,6 +12,15 @@ import styles from "./pages.module.css";
 import Header from "../molecules/Header";
 
 const PeopleBlock = () => {
+
+  const animal = '20'
+  // console.log(Object.getPrototypeOf(animal))
+  const arr = []
+  console.log(Object.getPrototypeOf(arr))
+
+
+
+
   const dispatch = useDispatch();
   const currentPage = useSelector((state) => state.peoplePagination.currentPage);
 
