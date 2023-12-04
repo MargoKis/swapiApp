@@ -7,13 +7,13 @@ import Loading from "../molecules/Loading";
 import Pagination from "../molecules/Pagination";
 import { useGetPlanetsQuery } from "../api/apiCombined";
 import { useSelector, useDispatch } from "react-redux";
-import { setPlanetsCurrentPage } from "../redux/paginationSlice"; // Оновлений імпорт
+import { setPlanetsCurrentPage } from "../redux/paginationSlice"; 
 import styles from "./pages.module.css";
 import Header from "../molecules/Header";
 
 const PlanetsBlock = () => {
   const dispatch = useDispatch();
-  const currentPage = useSelector((state) => state.planetsPagination.currentPage); // Змінено з state.pagination на state.planetsPagination
+  const currentPage = useSelector((state) => state.planetsPagination.currentPage); 
   const { data: planets, isLoading, error } = useGetPlanetsQuery(currentPage);
  
   const [totalPages, setTotalPages] = useState(1);
@@ -22,7 +22,7 @@ const PlanetsBlock = () => {
     if (page < 1 || page > totalPages) {
       return;
     }
-    dispatch(setPlanetsCurrentPage(page)); // Використання відповідного action для планет
+    dispatch(setPlanetsCurrentPage(page)); 
   };
   
   useEffect(() => {
