@@ -7,12 +7,13 @@ import Loading from "../molecules/Loading";
 import Pagination from "../molecules/Pagination";
 import { useGetStarshipsQuery } from "../api/apiCombined";
 import { useSelector, useDispatch } from "react-redux";
-import { setStarshipsCurrentPage } from "../redux/paginationSlice"; // Змінений імпорт
+import { setStarshipsCurrentPage } from "../redux/paginationSlice"; 
 import styles from "./pages.module.css";
+import Header from "../molecules/Header";
 
 const StarshipsBlock = () => {
   const dispatch = useDispatch();
-  const currentPage = useSelector((state) => state.starshipsPagination.currentPage); // Змінено з state.pagination на state.starshipsPagination
+  const currentPage = useSelector((state) => state.starshipsPagination.currentPage); 
   const { data: starships, isLoading, error } = useGetStarshipsQuery(currentPage);
   const [totalPages, setTotalPages] = useState(1);
 
@@ -20,7 +21,7 @@ const StarshipsBlock = () => {
     if (page < 1 || page > totalPages) {
       return; 
     }
-    dispatch(setStarshipsCurrentPage(page)); // Використання відповідного action для зоряних кораблів
+    dispatch(setStarshipsCurrentPage(page)); 
   };
 
   useEffect(() => {
