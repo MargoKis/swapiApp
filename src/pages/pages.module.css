@@ -18,6 +18,9 @@
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 20px;
   margin-bottom: 4%;
   height: auto;
@@ -37,3 +40,14 @@
 .itemName {
   color: rgb(66, 66, 66);
 }
+
+.img {
+  position: absolute;
+  bottom: 20px; 
+  right: 0px; 
+}
+
+.robot {
+  width: 200px;
+}
+

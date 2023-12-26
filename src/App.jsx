@@ -8,13 +8,14 @@ import Planets from "./pages/Planets";
 import Planet from "./pages/Details/Planet";
 import Header from "./molecules/Header";
 import Error404 from "./molecules/Error404";
+import Home from "./pages/Home";
 import "./index.css";
 
 function App() {
   return (
     <>
       <Routes>
-        <Route exact path="/" element={<Header />} />
+        <Route exact path="/" element={<Home />} />
         <Route exact path="/people" element={<People />} />
         <Route exact path="/people/:id" element={<Person />} />
         <Route exact path="/starships" element={<Starships />} />

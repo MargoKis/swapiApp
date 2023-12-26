@@ -38,7 +38,7 @@ const PersonDetails = () => {
     <>
     <Header/>
      <div>
-      <h2 className={styles.mainTitle}>Details about {person.name}</h2>
+      <h2 className={styles.mainTitle}>Details about person {person.name}</h2>
       <div className={styles.card}>
         <p>Gender: {person.gender}</p>
         <p>Hair color: {person.hair_color}</p>

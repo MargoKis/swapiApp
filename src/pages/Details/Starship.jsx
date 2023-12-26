@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { useParams } from "react-router-dom";
 import Loading from "../../molecules/Loading";
 import Error404 from "../../molecules/Error404";
+import Header from "../../molecules/Header";
+import styles from './details.module.css'
 
 const StarshipDetails = () => {
   const { id } = useParams();
@@ -17,7 +19,7 @@ const StarshipDetails = () => {
     axios
       .get(`https://swapi.dev/api/starships/${id}`)
       .then((response) => {
-        setStarship(response.data.results);
+        setStarship(response.data);
       })
 
       .catch((err) => setError(err.message))
@@ -36,11 +38,11 @@ const StarshipDetails = () => {
     <>
     <Header/>
     <div>
-      <h2>Деталі космічного корабля {starship.name}</h2>
-      <div>
-        <p>Модель: {starship.model}</p>
-        <p>Довжина: {starship.length}</p>
-        <p>Пасажири: {starship.passengers}</p>
+      <h2 className={styles.mainTitle}>Details about starship {starship.name}</h2>
+      <div className={styles.card}>
+        <p>Model: {starship.model}</p>
+        <p>Length: {starship.length}</p>
+        <p>Passenger: {starship.passengers}</p>
       </div>
     </div>
     </>
