@@ -1,14 +1,21 @@
 {
   "index.css": {
-    "file": "assets/index-58d86b7e.css",
+    "file": "assets/index-c00b623d.css",
     "src": "index.css"
   },
   "index.html": {
-    "css": [
-      "assets/index-58d86b7e.css"
+    "assets": [
+      "assets/robot-da80d684.png"
     ],
-    "file": "assets/index-5cf4ca57.js",
+    "css": [
+      "assets/index-c00b623d.css"
+    ],
+    "file": "assets/index-ba5fcd23.js",
     "isEntry": true,
     "src": "index.html"
+  },
+  "src/assets/robot.png": {
+    "file": "assets/robot-da80d684.png",
+    "src": "src/assets/robot.png"
   }
 }
