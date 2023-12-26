@@ -8,7 +8,7 @@ import { store } from './api/store.js'
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="swapiApp">
       <Provider store={store}>
         <App />
       </Provider>
